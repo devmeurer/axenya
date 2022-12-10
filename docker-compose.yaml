@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  axenya:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /code
+    container_name: axenya_container
+    volumes:
+      - .:/code
+    ports:
+      - '8000:8000'
